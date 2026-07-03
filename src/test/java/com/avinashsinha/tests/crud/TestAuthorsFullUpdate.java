@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestAuthorsFullUpdate extends BaseTest {
 
-    private static final Logger logger = LogManager.getLogger(TestAuthorsFullUpdate.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestAuthorsFullUpdate.class);
 
     @Test(groups = "Regression", priority = 1)
     @Owner("Avinash Sinha")
@@ -22,7 +22,7 @@ public class TestAuthorsFullUpdate extends BaseTest {
 
         int id_e = 100;
 
-        logger.info("Build Payload and Send the API Request");
+        LOGGER.info("Build Payload and Send the API Request");
 
         // 1) build payload (can be dynamic or default)
         String payload = payloadManager.fullUpdateAuthorRequest();
@@ -58,7 +58,7 @@ public class TestAuthorsFullUpdate extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the API Request and assertions");
+        LOGGER.info("End the API Request and assertions");
 
     }
 }
