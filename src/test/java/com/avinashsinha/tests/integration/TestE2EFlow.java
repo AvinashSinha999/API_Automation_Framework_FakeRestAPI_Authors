@@ -12,19 +12,17 @@ import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.in;
-import static org.assertj.core.api.InstanceOfAssertFactories.iterable;
 
 public class TestE2EFlow extends BaseTest {
 
-    private static final Logger logger = LogManager.getLogger(TestE2EFlow.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestE2EFlow.class);
 
     @Test(groups = "QA", priority = 1)
     @Owner("Avinash Sinha")
     @Description("TC#1 : Step 1. Create the Author")
     public void testCreateAuthors_POST() {
 
-        logger.info("Start the Author Creation");
+        LOGGER.info("Start the Author Creation");
 
         // 1) build payload (can be dynamic or default)
         String payload = payloadManager.createAuthorRequest();
@@ -61,7 +59,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Complete the Author Creation");
+        LOGGER.info("Complete the Author Creation");
 
     }
 
@@ -70,7 +68,7 @@ public class TestE2EFlow extends BaseTest {
     @Description("TC#2 : Step 2. Details of Authors")
     public void testDetailAuthors_GET() {
 
-        logger.info("Show the Details of All Authors");
+        LOGGER.info("Show the Details of All Authors");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -82,7 +80,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the Details of All Authors");
+        LOGGER.info("End the Details of All Authors");
 
     }
 
@@ -93,7 +91,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = 86;
 
-        logger.info("Show the Details of Single Author by Id");
+        LOGGER.info("Show the Details of Single Author by Id");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -131,7 +129,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the Details of Single Author by Id");
+        LOGGER.info("End the Details of Single Author by Id");
 
     }
 
@@ -142,7 +140,7 @@ public class TestE2EFlow extends BaseTest {
 
         int idBook_e = (int) iTestContext.getAttribute("idBook");
 
-        logger.info("Show the Details of Author Book by Id");
+        LOGGER.info("Show the Details of Author Book by Id");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -155,7 +153,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the Details of Author Book by Id");
+        LOGGER.info("End the Details of Author Book by Id");
 
     }
 
@@ -166,7 +164,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = (int) iTestContext.getAttribute("id");
 
-        logger.info("Full Update the Author by Id");
+        LOGGER.info("Full Update the Author by Id");
 
         // 1) build payload (can be dynamic or default)
         String payload = payloadManager.fullUpdateAuthorRequest();
@@ -202,7 +200,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Complete the Full Updation");
+        LOGGER.info("Complete the Full Updation");
 
     }
 
@@ -213,7 +211,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = (int) iTestContext.getAttribute("id");
 
-        logger.info("Delete the Author by Id");
+        LOGGER.info("Delete the Author by Id");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -226,7 +224,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Deletion is Done");
+        LOGGER.info("Deletion is Done");
 
     }
 
