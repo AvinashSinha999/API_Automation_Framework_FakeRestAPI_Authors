@@ -13,14 +13,14 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 public class TestJSONSchemaValidation extends BaseTest {
 
-    private static final Logger logger = LogManager.getLogger(TestJSONSchemaValidation.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestJSONSchemaValidation.class);
 
     @Test(groups = "Regression", priority = 1)
     @Owner("Avinash Sinha")
     @Description("TC#1 : Step 1. JSON Schema Validation")
     public void testJSONSchemaValidation_POST() {
 
-        logger.info("Build Payload and Send the API Request");
+        LOGGER.info("Build Payload and Send the API Request");
 
         // 1) build payload (can be dynamic or default)
         String payload = payloadManager.createAuthorJSONSchemaRequest();
@@ -59,7 +59,7 @@ public class TestJSONSchemaValidation extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the API Request and assertions");
+        LOGGER.info("End the API Request and assertions");
 
     }
 
