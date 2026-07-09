@@ -1,58 +1,63 @@
-# API Automation Framework – FakeRestAPI Authors
+# 🚀 API Automation Framework | FakeRestAPI Authors
 
-![Java](https://img.shields.io/badge/Java-11%2B-blue)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-IDE-000000?logo=intellijidea&logoColor=white)
+> A modular **API Automation Framework** built using **Java**, **Rest-Assured**, **TestNG**, **Maven**, **AssertJ**, and **Allure Reports** to automate testing of the **FakeRestAPI Authors** endpoints.
+
+<p align="center">
+
+![Java](https://img.shields.io/badge/Java-11+-blue?logo=openjdk)
 ![Maven](https://img.shields.io/badge/Maven-Build%20Tool-C71A36?logo=apachemaven&logoColor=white)
-![TestNG](https://img.shields.io/badge/TestNG-Framework-brightgreen)
 ![RestAssured](https://img.shields.io/badge/RestAssured-API--Testing-yellowgreen)
+![TestNG](https://img.shields.io/badge/TestNG-Framework-brightgreen)
+![AssertJ](https://img.shields.io/badge/AssertJ-Assertions-orange)
 ![Allure](https://img.shields.io/badge/Allure-Reports-ff69b4)
+![Log4j2](https://img.shields.io/badge/Log4j2-Logging-yellow)
+
+</p>
 
 ---
 
-## 🗂️ Overview  
+# 🗂️ Overview
 
-This project is an **API Automation Framework** built to test the public
-[FakeRestAPI Authors Endpoint](https://fakerestapi.azurewebsites.net/index.html)
+This repository contains a modular **API Automation Framework** for testing the **FakeRestAPI Authors** endpoints.
 
-The framework is developed using **Java**, **Rest-Assured**, **TestNG**, **Maven**, and **Allure Reports**, providing a clean, modular, and maintainable structure.
+Built with **Java**, **Rest-Assured**, **TestNG**, and **Maven**, the framework demonstrates industry-standard API automation practices, including reusable payload management, centralized assertions, JSON Schema validation, end-to-end workflow testing, logging, and rich Allure reporting.
 
-Payloads in this project are created using **raw JSON strings**, making it simple and dependency-free.
-
----
-
-## ⚙️ Tech Stack
-
-- **Java 11+**
-- **IntelliJ IDEA** – IDE for development
-- **Maven** – Build & dependency management
-- **Rest-Assured** – HTTP client for API automation
-- **TestNG** – Testing framework
-- **AssertJ** – Advanced assertions
-- **Allure Reports** – Reporting framework
+The project emphasizes **clean architecture**, **code reusability**, and **maintainability**, making it a solid reference for building scalable API automation frameworks.
 
 ---
 
-## 🚀 Features
+# ✨ Features
 
-- Automated tests for the **Authors** and **Authors → Books** endpoints
-- Covers full **CRUD operations**
-- **String-based payloads creation**
-- Includes **JSON Schema Validation**
-- Integration test covering end-to-end author flows
-- Structured into modular components:
-    - Endpoints
-    - Payload Manager
-    - Assertion utilities
-    - CRUD Tests
-    - Integration Tests
-- Supports **Allure Reporting**
-- Logging support using **Log4j2**
+- ✅ Complete CRUD API Automation
+- ✅ Modular Framework Design
+- ✅ Reusable Payload Management
+- ✅ Centralized Assertion Utilities
+- ✅ JSON Schema Validation
+- ✅ End-to-End Integration Testing
+- ✅ TestNG Suite Execution
+- ✅ Log4j2 Logging
+- ✅ Allure Reporting
 
 ---
 
-## 🏗️ Project Structure
+# 🛠️ Tech Stack
 
-```bash
+| Technology | Usage |
+|------------|-------|
+| Java 11+ | Programming Language |
+| Maven | Dependency & Build Management |
+| Rest-Assured | API Automation |
+| TestNG | Test Framework |
+| AssertJ | Fluent Assertions |
+| Log4j2 | Logging |
+| Allure Reports | Test Reporting |
+| IntelliJ IDEA | Development IDE |
+
+---
+
+# 🏗️ Project Structure
+
+```text
 API_Automation_Framework_FakeRestAPI_Authors/
 │
 ├── .idea/                                                  # IntelliJ config
@@ -70,13 +75,13 @@ API_Automation_Framework_FakeRestAPI_Authors/
 │   ├── main/
 │   │   ├── java/com.avinashsinha/
 │   │   │   ├── endpoints/
-│   │   │   │   └── APIConstants.java                       # API endpoints constants
+│   │   │   │   └── APIConstants.java                       # API endpoint constants
 │   │   │   │
 │   │   │   └── module/
 │   │   │       └── PayloadManager.java                     # Payload Manager (String-based)
 │   │   │
 │   │   └── resources/
-│   │       └── log4j2.xml                                  # Logging config
+│   │       └── log4j2.xml                                  # Logging configuration
 │   │
 │   └── test/
 │       ├── java/com.avinashsinha/
@@ -84,10 +89,10 @@ API_Automation_Framework_FakeRestAPI_Authors/
 │       │   │   └── AssertActions.java                      # Assertion utilities
 │       │   │
 │       │   ├── base/
-│       │   │   └── BaseTest.java                           # Base Test setup
+│       │   │   └── BaseTest.java                           # Base test configuration
 │       │   │
 │       │   └── tests/
-│       │       ├── crud/                                   # CRUD Test Cases
+│       │       ├── crud/                                   # CRUD test cases
 │       │       │   ├── TestAuthorBookById.java
 │       │       │   ├── TestAuthorsCreate.java
 │       │       │   ├── TestAuthorsDelete.java
@@ -96,7 +101,7 @@ API_Automation_Framework_FakeRestAPI_Authors/
 │       │       │   ├── TestAuthorsFullUpdate.java
 │       │       │   └── TestJSONSchemaValidation.java
 │       │       │
-│       │       ├── integration/                            # Integration Tests
+│       │       ├── integration/                            # End-to-end tests
 │       │       │   └── TestE2EFlow.java
 │       │       │
 │       │       └── sample/                                 # Sample Tests
@@ -104,63 +109,106 @@ API_Automation_Framework_FakeRestAPI_Authors/
 │       │
 │       └── resources/
 │           └── schemas/
-│               └── author_create_schema.json               # JSON schema for validation
+│               └── author_create_schema.json                # JSON schema for validation
 │
 └── README.md
-
 ```
 
 ---
 
-## ▶️ Running Tests
+# 📦 Framework Components
 
-### Integration Test (Create Author, Details, Update and Delete Author)
+| Component | Description |
+|------------|-------------|
+| **APIConstants** | Stores all API endpoint constants |
+| **PayloadManager** | Builds reusable JSON request payloads |
+| **BaseTest** | Provides common test setup and configuration |
+| **AssertActions** | Centralized assertion utilities |
+| **CRUD Tests** | Individual API CRUD test scenarios |
+| **Integration Tests** | End-to-end workflow validation |
+| **Resources** | Log4j2 configuration and JSON Schema files |
+
+---
+
+# ✅ Test Coverage
+
+| Endpoint | Test Scenario |
+|-----------|---------------|
+| **POST** `/api/v1/Authors` | Create Author |
+| **GET** `/api/v1/Authors` | Retrieve All Authors |
+| **GET** `/api/v1/Authors/{id}` | Retrieve Author by ID |
+| **PUT** `/api/v1/Authors/{id}` | Update Author |
+| **DELETE** `/api/v1/Authors/{id}` | Delete Author |
+| **GET** `/api/v1/Authors/authors/books/{id}` | Retrieve Author Books |
+| Response Validation | JSON Schema Validation |
+| Workflow | End-to-End Integration Testing |
+
+---
+
+# ▶️ Running Tests
+
+Execute any TestNG suite using Maven.
+
+### Example
 
 ```bash
 mvn clean test -DsuiteXmlFile=testng_integration.xml
 ```
 
-#### Available TestNG XMLs
+### Available Test Suites
 
-- `testng_authorBookById.xml`
-- `testng_createAuthors.xml`
-- `testng_deleteAuthors.xml`
-- `testng_detailsAuthorById.xml`
-- `testng_fullUpdate.xml`
-- `testng_integration.xml`
-- `testng_JSONSchemaValidation.xml`
-- `testng_sample.xml`
+| Suite | XML File |
+|--------|----------|
+| Create Author | `testng_createAuthors.xml` |
+| Delete Author | `testng_deleteAuthors.xml` |
+| Author Details | `testng_detailsAuthorById.xml` |
+| Full Update | `testng_fullUpdate.xml` |
+| Author Books | `testng_authorBookById.xml` |
+| JSON Schema Validation | `testng_JSONSchemaValidation.xml` |
+| Sample Tests | `testng_sample.xml` |
+| End-to-End Flow | `testng_integration.xml` |
 
 ---
 
-## 📊 Reporting
-### Generate Allure Report
+# 📊 Allure Reports
+
+Generate the report using:
 
 ```bash
 allure serve allure-results
 ```
 
-  <img src="https://github.com/user-attachments/assets/285180c9-fc54-45ec-9289-93075c9f199f" alt="FakeRestAPI Authors Allure Report" width="1100">
+<p align="center">
+<img width="1100" src="https://github.com/user-attachments/assets/285180c9-fc54-45ec-9289-93075c9f199f" alt="Allure Report">
+</p>
 
-This will launch an interactive report in your browser.
+The command launches an interactive Allure dashboard in your default browser.
 
 ---
 
-##  ✅ Example Payload (String-Based JSON)
+# 📝 Sample JSON Payload
 
 ```java
 String payload = """
 {
-  "id": 15,
-  "idBook": 3,
-  "firstName": "Avinash",
-  "lastName": "Sinha"
+    "id": 15,
+    "idBook": 5,
+    "firstName": "Avinash",
+    "lastName": "Sinha"
 }
 """;
-
 ```
----
-## 📌 Author
-👤 Avinash Sinha
 
 ---
+
+# 👨‍💻 Author
+
+**Avinash Sinha**
+
+If you found this repository helpful, consider giving it a ⭐ on GitHub.
+
+---
+
+# 📄 License
+
+This project is intended for **educational** and **learning purposes**.
