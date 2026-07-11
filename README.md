@@ -18,25 +18,25 @@
 
 # 🗂️ Overview
 
-This repository contains a modular **API Automation Framework** for testing the **FakeRestAPI Authors** endpoints.
+This repository contains a modular **API Automation Framework** developed for testing the **FakeRestAPI Authors** endpoints using **Java**, **Rest-Assured**, **TestNG**, and **Maven**.
 
-Built with **Java**, **Rest-Assured**, **TestNG**, and **Maven**, the framework demonstrates industry-standard API automation practices, including reusable payload management, centralized assertions, JSON Schema validation, end-to-end workflow testing, logging, and rich Allure reporting.
+The framework demonstrates industry-standard API automation practices, including **CRUD testing**, **reusable payload management**, **centralized assertions**, **JSON Schema validation**, **end-to-end workflow testing**, **logging**, and **Allure reporting**.
 
-The project emphasizes **clean architecture**, **code reusability**, and **maintainability**, making it a solid reference for building scalable API automation frameworks.
+Designed with **clean architecture**, **reusability**, and **maintainability** in mind, this project serves as a practical reference for building scalable API automation frameworks.
 
 ---
 
-# ✨ Features
+# ✨ Key Features
 
 - ✅ Complete CRUD API Automation
-- ✅ Modular Framework Design
+- ✅ Modular Framework Architecture
 - ✅ Reusable Payload Management
 - ✅ Centralized Assertion Utilities
 - ✅ JSON Schema Validation
-- ✅ End-to-End Integration Testing
+- ✅ End-to-End Workflow Testing
 - ✅ TestNG Suite Execution
 - ✅ Log4j2 Logging
-- ✅ Allure Reporting
+- ✅ Rich Allure Reporting
 
 ---
 
@@ -60,13 +60,13 @@ The project emphasizes **clean architecture**, **code reusability**, and **maint
 ```text
 API_Automation_Framework_FakeRestAPI_Authors/
 │
-├── .idea/                                                  # IntelliJ config
+├── .idea/                                                  # IntelliJ configuration
 ├── .mvn/                                                   # Maven wrapper files
-├── allure-results/                                         # Allure results (auto-generated)
+├── allure-results/                                         # Allure execution results
 ├── logs/
-│   └── test.log                                            # Execution logs
+│   └── test.log                                            # Test execution logs
 │
-├── pom.xml                                                 # Project dependencies & build config
+├── pom.xml                                                 # Maven dependencies & build configuration
 ├── .gitignore
 │
 ├── testng_*.xml                                            # TestNG suite files
@@ -78,7 +78,7 @@ API_Automation_Framework_FakeRestAPI_Authors/
 │   │   │   │   └── APIConstants.java                       # API endpoint constants
 │   │   │   │
 │   │   │   └── module/
-│   │   │       └── PayloadManager.java                     # Payload Manager (String-based)
+│   │   │       └── PayloadManager.java                     # String-based payload manager
 │   │   │
 │   │   └── resources/
 │   │       └── log4j2.xml                                  # Logging configuration
@@ -101,15 +101,15 @@ API_Automation_Framework_FakeRestAPI_Authors/
 │       │       │   ├── TestAuthorsFullUpdate.java
 │       │       │   └── TestJSONSchemaValidation.java
 │       │       │
-│       │       ├── integration/                            # End-to-end tests
+│       │       ├── integration/                            # End-to-end workflow tests
 │       │       │   └── TestE2EFlow.java
 │       │       │
-│       │       └── sample/                                 # Sample Tests
+│       │       └── sample/                                 # Sample test implementations
 │       │           └── TestIntegrationSample.java
 │       │
 │       └── resources/
 │           └── schemas/
-│               └── author_create_schema.json                # JSON schema for validation
+│               └── author_create_schema.json               # JSON Schema validation
 │
 └── README.md
 ```
@@ -121,16 +121,16 @@ API_Automation_Framework_FakeRestAPI_Authors/
 | Component | Description |
 |------------|-------------|
 | **APIConstants** | Stores all API endpoint constants |
-| **PayloadManager** | Builds reusable JSON request payloads |
-| **BaseTest** | Provides common test setup and configuration |
-| **AssertActions** | Centralized assertion utilities |
-| **CRUD Tests** | Individual API CRUD test scenarios |
-| **Integration Tests** | End-to-end workflow validation |
-| **Resources** | Log4j2 configuration and JSON Schema files |
+| **PayloadManager** | Generates reusable request payloads |
+| **BaseTest** | Provides common test initialization and configuration |
+| **AssertActions** | Contains centralized assertion utilities |
+| **CRUD Tests** | Implements Create, Read, Update, and Delete API test scenarios |
+| **Integration Tests** | Validates complete end-to-end API workflows |
+| **Resources** | Stores Log4j2 configuration and JSON Schema files |
 
 ---
 
-# ✅ Test Coverage
+# 🌐 API Coverage
 
 | Endpoint | Test Scenario |
 |-----------|---------------|
@@ -172,7 +172,7 @@ mvn clean test -DsuiteXmlFile=testng_integration.xml
 
 # 📊 Allure Reports
 
-Generate the report using:
+Generate and launch the Allure report using:
 
 ```bash
 allure serve allure-results
@@ -182,11 +182,11 @@ allure serve allure-results
 <img width="1100" src="https://github.com/user-attachments/assets/285180c9-fc54-45ec-9289-93075c9f199f" alt="Allure Report">
 </p>
 
-The command launches an interactive Allure dashboard in your default browser.
+The command generates and opens an interactive **Allure dashboard** displaying execution results, logs, and test statistics.
 
 ---
 
-# 📝 Sample JSON Payload
+# 📝 Sample Request Payload
 
 ```java
 String payload = """
@@ -201,14 +201,29 @@ String payload = """
 
 ---
 
+# ⭐ Repository Highlights
+
+- ✔ Modular API Automation Framework
+- ✔ Industry-Standard Project Structure
+- ✔ Complete CRUD API Testing
+- ✔ Rest-Assured + TestNG
+- ✔ Reusable Payload Management
+- ✔ Centralized Assertions
+- ✔ JSON Schema Validation
+- ✔ End-to-End Integration Testing
+- ✔ Log4j2 Logging
+- ✔ Rich Allure Reporting
+
+---
+
 # 👨‍💻 Author
 
 **Avinash Sinha**
 
-If you found this repository helpful, consider giving it a ⭐ on GitHub.
+If you found this repository useful, consider giving it a ⭐.
 
 ---
 
 # 📄 License
 
-This project is intended for **educational** and **learning purposes**.
+This repository is intended for **educational** and **learning purposes**.
