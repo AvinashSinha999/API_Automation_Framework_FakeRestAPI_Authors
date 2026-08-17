@@ -316,3 +316,15 @@
 2026-07-23 20:58:35 INFO  TestE2EFlow - Complete the Full Updation
 2026-07-23 20:58:35 INFO  TestE2EFlow - Delete the Author by Id
 2026-07-23 20:58:35 INFO  TestE2EFlow - Deletion is Done
+2026-08-17 22:29:09 INFO  TestE2EFlow - Start the Author Creation
+2026-08-17 22:29:12 INFO  TestE2EFlow - Complete the Author Creation
+2026-08-17 22:29:12 INFO  TestE2EFlow - Show the Details of All Authors
+2026-08-17 22:29:13 INFO  TestE2EFlow - End the Details of All Authors
+2026-08-17 22:29:13 INFO  TestE2EFlow - Show the Details of Single Author by Id
+2026-08-17 22:29:14 INFO  TestE2EFlow - End the Details of Single Author by Id
+2026-08-17 22:29:14 INFO  TestE2EFlow - Show the Details of Author Book by Id
+2026-08-17 22:29:14 INFO  TestE2EFlow - End the Details of Author Book by Id
+2026-08-17 22:29:14 INFO  TestE2EFlow - Full Update the Author by Id
+2026-08-17 22:29:15 INFO  TestE2EFlow - Complete the Full Updation
+2026-08-17 22:29:15 INFO  TestE2EFlow - Delete the Author by Id
+2026-08-17 22:29:16 INFO  TestE2EFlow - Deletion is Done
